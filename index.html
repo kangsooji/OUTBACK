@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아웃백 간단하게</title>
+
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_wrap">
+                <h1>
+                    <a href=""><img src="./images/logo_white_type_02.png" alt=""></a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="">BRAND</a></li>
+                        <li><a href="">MENU</a></li>
+                        <li><a href="">MEMBRERSHIP</a></li>
+                        <li><a href="">BENEFIT</a></li>
+                        <li><a href="">COOKING CLASS</a></li>
+                        <li><a href="">STORE</a></li>
+                    </ul>
+                </nav>
+                <div class="search"><i class="xi-search"></i></div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main_visual">
+                <div class="visual_slide">
+                    <div class="itm itm01">01</div>
+                    <div class="itm itm02">02</div>
+                    <div class="itm itm03">03</div>
+                </div>
+                <div class="arrows">
+                    <div class="left_arrow"></div>
+                    <div class="right_arrow"></div>
+                </div>
+            </section>
+            <section class="main_content">
+                <div class="title"></div>
+                <div class="inner">
+                    <figure>
+                        <div class="img_box">
+                            <img src="./images/mainportfolio01.jpg" alt="">
+                        </div>
+                        <strong>AUSSIE CHEESE FRIES</strong>
+                    </figure>
+                    <figure>
+                        <div class="img_box">
+                            <img src="./images/mainportfolio02.jpg" alt="">
+                        </div>
+                        <strong>GOLD COAST COCONUT SHRIMP</strong>
+                    </figure>
+                    <figure>
+                        <div class="img_box">
+                            <img src="./images/mainportfolio03.jpg" alt="">
+                        </div>
+                        <strong>BABY BACK RIBS</strong>
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            &copy; kang.
+        </footer>
+    </div>
+    <script>
+        $(function () {
+            $('.visual_slide').slick({
+                arrows: false,
+                autoplay: true,
+                pauseOnHover: false,
+
+            });
+
+            $('.main_visual .arrows .left_arrow').on('click', function () {
+                $('.visual_slide').slick('slickPrev')
+            });
+            $('.main_visual .arrows .right_arrow').on('click', function () {
+                $('.visual_slide').slick('slickNext')
+            });
+        });
+    </script>
+</body>
+
+</html>
